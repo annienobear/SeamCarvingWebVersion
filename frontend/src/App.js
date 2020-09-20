@@ -1,6 +1,7 @@
 import React, {Component, useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FrontPage from "./FrontPage";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -17,7 +18,7 @@ function App() {
       <header className="App-header">
         <p className={"SeamOnline"}>{message}</p>
       </header>
-      <p>asdasdasd</p>
+        <FrontPage/>
     </div>
   );
 }
