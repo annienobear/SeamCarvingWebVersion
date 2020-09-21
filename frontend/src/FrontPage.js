@@ -13,6 +13,16 @@ class FrontPage extends React.Component {
     }
 
     handleSubmit(event) {
+        fetch('/api/upload/', {
+            method: 'POST',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body: this.state.value
+        }).then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
         event.preventDefault();
     }
 
