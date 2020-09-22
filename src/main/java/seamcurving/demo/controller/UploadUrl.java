@@ -12,8 +12,7 @@ public class UploadUrl {
     public Scanner scanner = new Scanner(System.in);
 
     @PostMapping(path = "/api/upload", consumes = "application/json")
-    public String sendUrl(@RequestBody String url) {
+    public String getUrl(@RequestBody String url) {
         return url;
     }
-
 }
