@@ -10,9 +10,17 @@ import java.util.Scanner;
 @RestController
 public class UploadUrl {
     public Scanner scanner = new Scanner(System.in);
+    private String ans;
 
     @PostMapping(path = "/api/upload", consumes = "application/json")
     public String getUrl(@RequestBody String url) {
+        ans = url;
         return url;
     }
+
+    public String getAns() {
+        return ans;
+    }
+
+
 }
